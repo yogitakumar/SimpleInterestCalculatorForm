@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'flutterproject.dart';
+import 'HomePage.dart';
 
 void main() => runApp(MyApp());
 
@@ -14,12 +14,22 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      //home:MyHomePage(),
-      //home:firstflutter(),
-      home: SimpleInterest(),
+      home: //SimpleInterest(),
+      HomePage(),
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 class SimpleInterest extends StatefulWidget {
   @override
@@ -72,15 +82,19 @@ class _SimpleInterestState extends State<SimpleInterest> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.grey,
+
+        backgroundColor:Colors.grey,
         appBar: AppBar(
           title: Text("Simple Interest Calculator"),
         ),
         body: Form(
           key: _formKey,
-          child: SingleChildScrollView(
+          child:
+
+          SingleChildScrollView(
             child: Column(
               children: <Widget>[
+
                 Container(
                   height: 200,
                   width: 200,
@@ -108,7 +122,7 @@ class _SimpleInterestState extends State<SimpleInterest> {
                         labelText: 'Principal',
                         hintText: 'Enter principal amount',
                         errorStyle:
-                            TextStyle(color: Colors.yellowAccent, fontSize: 15),
+                            TextStyle(color: Colors.redAccent, fontSize: 15),
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(5))),
                   ),
@@ -132,7 +146,7 @@ class _SimpleInterestState extends State<SimpleInterest> {
                         labelText: 'Rate Of Interest',
                         hintText: 'In percent',
                         errorStyle:
-                            TextStyle(color: Colors.yellowAccent, fontSize: 15),
+                            TextStyle(color: Colors.redAccent, fontSize: 15),
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(5))),
                   ),
@@ -159,7 +173,7 @@ class _SimpleInterestState extends State<SimpleInterest> {
                               labelText: 'Term',
                               hintText: 'In years',
                               errorStyle: TextStyle(
-                                  color: Colors.yellowAccent, fontSize: 15),
+                                  color: Colors.redAccent, fontSize: 15),
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(5))),
                         ),
@@ -183,7 +197,7 @@ class _SimpleInterestState extends State<SimpleInterest> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(20.0),
                   child: Row(
                     children: <Widget>[
                       Expanded(
